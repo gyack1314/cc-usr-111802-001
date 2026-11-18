@@ -1,0 +1,267 @@
+{
+  "common_datum": "1985国家高程基准",
+  "known_at": [
+    "2026-08-01T00:00:00+00:00",
+    "2026-09-01T00:00:00+00:00"
+  ],
+  "issued_at": [
+    "2026-08-02T00:00:00+00:00",
+    "2026-09-02T00:00:00+00:00"
+  ],
+  "documents": [
+    {
+      "source": "沿海潮位中心",
+      "document_id": "tide-observations-2025",
+      "revision": "r1",
+      "received_at": "2026-07-25T00:00:00+00:00",
+      "records": [
+        {
+          "kind": "observation",
+          "id": "obs-port-a",
+          "revision": "r1",
+          "valid_from": "2025-11-20",
+          "payload": {
+            "metric": "annual_max_level",
+            "region": "north-coast",
+            "segment": "levee-a",
+            "station": "port-a",
+            "unit": "cm",
+            "year": 2025,
+            "value": 320,
+            "datum": "港口A潮位零点"
+          }
+        },
+        {
+          "kind": "observation",
+          "id": "obs-port-b",
+          "revision": "r1",
+          "valid_from": "2025-11-20",
+          "payload": {
+            "metric": "annual_max_level",
+            "region": "north-coast",
+            "segment": "levee-b",
+            "station": "port-b",
+            "unit": "cm",
+            "year": 2025,
+            "value": 470,
+            "datum": "港口B旧零点"
+          }
+        },
+        {
+          "kind": "observation",
+          "id": "obs-port-c",
+          "revision": "r1",
+          "valid_from": "2025-11-20",
+          "payload": {
+            "metric": "annual_max_level",
+            "region": "north-coast",
+            "segment": "levee-c",
+            "station": "port-c",
+            "unit": "cm",
+            "year": 2025,
+            "value": 300,
+            "datum": "港口C历史零点"
+          }
+        },
+        {
+          "kind": "observation",
+          "id": "obs-port-c-history",
+          "revision": "r1",
+          "valid_from": "2008-11-20",
+          "payload": {
+            "metric": "annual_max_level",
+            "region": "north-coast",
+            "segment": "levee-c",
+            "station": "port-c",
+            "unit": "cm",
+            "year": 2008,
+            "value": 295,
+            "datum": "港口C历史零点"
+          }
+        }
+      ]
+    },
+    {
+      "source": "测绘基准院",
+      "document_id": "datum-conversions",
+      "revision": "r1",
+      "received_at": "2026-07-20T00:00:00+00:00",
+      "records": [
+        {
+          "kind": "conversion",
+          "id": "conv-a",
+          "revision": "r1",
+          "valid_from": "2000-01-01",
+          "payload": {
+            "from_datum": "港口A潮位零点",
+            "to_datum": "1985国家高程基准",
+            "offset": 15,
+            "unit": "cm",
+            "valid_from": "2000-01-01"
+          }
+        },
+        {
+          "kind": "conversion",
+          "id": "conv-b-old",
+          "revision": "r1",
+          "valid_from": "2010-01-01",
+          "payload": {
+            "from_datum": "港口B旧零点",
+            "to_datum": "黄海基面",
+            "offset": 8,
+            "unit": "cm",
+            "valid_from": "2010-01-01"
+          }
+        },
+        {
+          "kind": "conversion",
+          "id": "conv-yellow-r1",
+          "revision": "r1",
+          "valid_from": "2010-01-01",
+          "payload": {
+            "from_datum": "黄海基面",
+            "to_datum": "1985国家高程基准",
+            "offset": -3,
+            "unit": "cm",
+            "valid_from": "2010-01-01"
+          }
+        }
+      ]
+    },
+    {
+      "source": "海洋预报台",
+      "document_id": "sea-level-background",
+      "revision": "r1",
+      "received_at": "2026-07-18T00:00:00+00:00",
+      "records": [
+        {
+          "kind": "reference",
+          "id": "ref-north-2025",
+          "revision": "r1",
+          "valid_from": "2025-01-01",
+          "payload": {
+            "metric": "annual_max_level",
+            "region": "north-coast",
+            "unit": "cm",
+            "year": 2025,
+            "value": 305,
+            "datum": "1985国家高程基准"
+          }
+        }
+      ]
+    },
+    {
+      "source": "防汛办",
+      "document_id": "levee-risk-rules",
+      "revision": "r1",
+      "received_at": "2026-07-15T00:00:00+00:00",
+      "records": [
+        {
+          "kind": "rule",
+          "id": "rule-levee-a",
+          "revision": "r1",
+          "valid_from": "2025-01-01",
+          "payload": {
+            "metric": "annual_max_level",
+            "region": "north-coast",
+            "segment": "levee-a",
+            "unit": "cm",
+            "datum": "1985国家高程基准",
+            "threshold": 20,
+            "direction": "above",
+            "action": "每周巡查"
+          }
+        },
+        {
+          "kind": "rule",
+          "id": "rule-levee-b",
+          "revision": "r1",
+          "valid_from": "2025-01-01",
+          "payload": {
+            "metric": "annual_max_level",
+            "region": "north-coast",
+            "segment": "levee-b",
+            "unit": "cm",
+            "datum": "1985国家高程基准",
+            "threshold": 100,
+            "direction": "above",
+            "action": "驻点值守"
+          }
+        },
+        {
+          "kind": "rule",
+          "id": "rule-north-default",
+          "revision": "r1",
+          "valid_from": "2025-01-01",
+          "payload": {
+            "metric": "annual_max_level",
+            "region": "north-coast",
+            "unit": "cm",
+            "datum": "1985国家高程基准",
+            "threshold": 30,
+            "direction": "above",
+            "action": "每旬巡查"
+          }
+        }
+      ]
+    },
+    {
+      "source": "测绘基准院",
+      "document_id": "datum-conversions",
+      "revision": "r2",
+      "received_at": "2026-08-20T00:00:00+00:00",
+      "records": [
+        {
+          "kind": "conversion",
+          "id": "conv-b-old",
+          "revision": "r2",
+          "valid_from": "2010-01-01",
+          "payload": {
+            "from_datum": "港口B旧零点",
+            "to_datum": "黄海基面",
+            "offset": -1,
+            "unit": "cm",
+            "valid_from": "2010-01-01"
+          }
+        },
+        {
+          "kind": "conversion",
+          "id": "conv-c",
+          "revision": "r1",
+          "valid_from": "2015-01-01",
+          "payload": {
+            "from_datum": "港口C历史零点",
+            "to_datum": "1985国家高程基准",
+            "offset": 25,
+            "unit": "cm",
+            "valid_from": "2015-01-01"
+          }
+        }
+      ]
+    },
+    {
+      "source": "沿海潮位中心",
+      "document_id": "tide-observations-2025",
+      "revision": "r2",
+      "received_at": "2026-08-22T00:00:00+00:00",
+      "records": [
+        {
+          "kind": "observation",
+          "id": "obs-port-a",
+          "revision": "r2",
+          "valid_from": "2025-11-20",
+          "payload": {
+            "metric": "annual_max_level",
+            "region": "north-coast",
+            "segment": "levee-a",
+            "station": "port-a",
+            "unit": "cm",
+            "year": 2025,
+            "value": 322,
+            "datum": "港口A潮位零点"
+          }
+        }
+      ]
+    }
+  ]
+}
